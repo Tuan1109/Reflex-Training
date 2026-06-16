@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reflex Trainer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div id="timer">02:00</div>
+
+        <button id="settingsBtn">⚙</button>
+      </header>
+
+      <main>
+        <div id="stimulus">▶</div>
+      </main>
+
+      <footer>
+        <button id="startBtn">▶ START</button>
+
+        <button id="pauseBtn">⏸</button>
+
+        <button id="stopBtn">⏹</button>
+      </footer>
+    </div>
+
+    <!-- SETTINGS -->
+
+    <div id="settingsModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Cài đặt</h2>
+
+        <h3>Mũi tên sử dụng</h3>
+
+        <div id="arrowContainer"></div>
+
+        <h3>Flash Mode</h3>
+
+        <label>
+          <input type="checkbox" id="flashMode" />
+          Bật Flash
+        </label>
+
+        <h3>Flash Time (ms)</h3>
+
+        <input type="range" id="flashTime" min="50" max="1000" value="300" />
+
+        <span id="flashValue">300</span>
+
+        <h3>Interval (giây)</h3>
+
+        <input
+          type="range"
+          id="interval"
+          min="0.3"
+          max="10"
+          step="0.1"
+          value="2"
+        />
+
+        <span id="intervalValue">2.0</span>
+
+        <h3>Thời gian hiệp (phút)</h3>
+
+        <input
+          type="range"
+          id="sessionTime"
+          min="0.5"
+          max="30"
+          step="0.5"
+          value="2"
+        />
+
+        <span id="sessionValue">2.0</span>
+
+        <button id="closeSettings">Đóng</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
